@@ -1,0 +1,76 @@
+:root {
+    --uline: coral;
+    --bcolor: white;
+}
+
+header h1,h2{
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    color: blueviolet;
+    font-family:Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: var(--uline);
+    text-decoration-thickness: 5px;
+}
+
+.gridbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: gray;
+    align-items: center;
+
+}
+
+.card {
+    border: 4px dashed;
+    border-color: var(--bcolor);
+    margin: 10px;
+    font-size: 10px;
+    height: 250px;
+    width: 420px;
+    font-size: 30px;
+    
+}
+
+.footer{
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    color: blueviolet;
+    font-family:Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+@media only screen and (min-width:768px){
+    .gridbox {
+        flex-direction: row;
+        background-color: yellow;
+    }
+
+    .card {
+        flex-basis: 40%;
+    }
+}
+
+@media only screen and (min-width:992px){
+    .gridbox {
+        flex-direction: row;
+        background-color: gray;
+    }
+
+    .card {
+        flex-basis: 30%;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .gridbox {
+        flex-direction: column;
+        background-color: blue;
+    }
+}
