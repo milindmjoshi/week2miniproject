@@ -18,22 +18,23 @@ header h1,h2{
 }
 
 .gridbox{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px 20px;
     background-color: darkslategrey;
-    align-items: center;
+    justify-content: center;
+    
 
 }
 
 .card {
     border: 4px dashed;
     border-color: var(--bcolor);
-    margin: 10px;
     font-size: 10px;
     height: 250px;
     width: 420px;
     font-size: 30px;
+    margin: 10px;
     
 }
 
@@ -70,29 +71,22 @@ header h1,h2{
 
 @media only screen and (min-width:768px){
     .gridbox {
-        flex-direction: row;
-        background-color: darkslategrey;
+        grid-template-columns: auto auto;
     }
 
-    .card {
-        flex-basis: 40%;
-    }
+     
 }
 
 @media only screen and (min-width:992px){
     .gridbox {
-        flex-direction: row;
-        background-color: darkslategrey;
+       grid-template-columns: auto auto auto;
     }
 
-    .card {
-        flex-basis: 30%;
-    }
+     
 }
 
 @media only screen and (max-width:768px){
     .gridbox {
-        flex-direction: column;
-        background-color: darkslategrey;
+         grid-template-columns: auto;
     }
 }
